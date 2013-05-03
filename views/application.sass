@@ -1,0 +1,37 @@
+@charset "UTF-8"
+
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+@mixin background-gradient($start, $end)
+  background-color: $end
+  background-image: -webkit-linear-gradient($start, $end)
+  background-image:  moz-linear-gradient($start, $end)
+  background-image:      linear-gradient($start, $end)
+  background-repeat: repat-x
+
+@mixin letter-press($deep)
+  text-shadow: 0 $deep 0 #fff
+
+@mixin user-select($cond)
+  -webkit-touch-callout: $cond
+  -webkit-user-select: $cond
+  -khtml-user-select: $cond
+  -moz-user-select: $cond
+  -ms-user-select: $cond
+  user-select: $cond
+
+@mixin clearfix
+  zoom: 1
+  &:before, &:after
+    display: block
+    height: 0
+    visibility: hidden
+    content: "\0020"
+  &:after
+    clear: both
+
+body
+  background: #f0f0f0
