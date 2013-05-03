@@ -1,0 +1,10 @@
+{
+    "name": "My Application",
+    "version": "0.0.1",
+    "dependencies": {
+        "requirejs": "latest",
+        "jquery": "latest",
+        "backbone-amd": "latest",
+        "underscore-amd" : "lastest"
+    }
+}
