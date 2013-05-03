@@ -15,8 +15,8 @@ This is my application's boilerplate for something. It's ready to use:
 Getting Start
 -------------
 
-  $ bundle
-  $ bower install
+    $ bundle
+    $ bower install
 
 Want to use other js libralies?
 -------------------------------
