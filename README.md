@@ -11,12 +11,15 @@ This is my application's boilerplate for something. It's ready to use:
 - slim
 - coffee-script
 - sinatra w/ reloader
+- livereload w/ grunt
 
 Getting Start
 -------------
 
     $ bundle
     $ bower install
+    $ npm install
+    $ foreman start
 
 Want to use other js libralies?
 -------------------------------
