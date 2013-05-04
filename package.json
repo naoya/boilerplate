@@ -1,0 +1,18 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.0",
+  "description": "My application's boilerplate",
+  "main": "app.rb",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Naoya Ito",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-livereload": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-regarde": "*"
+  }
+}
