@@ -1,30 +1,52 @@
-path = require 'path'
-lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet
-folderMount = (connect, point) -> connect.static(path.resolve point)
-
 module.exports = (grunt) ->
   grunt.initConfig
+    coffee:
+      assets:
+        expand: true
+        flatten: true
+        src: ['assets/*.coffee']
+        dest: 'public/js/'
+        ext: '.js'
+      tests:
+        expand: true
+        flatten: true
+        src: ['test/*.coffee']
+        dest: 'test/js/'
+        ext: '.js'
+        
+    slim:
+      test:
+        files:
+          'test/runner.html': 'test/runner.slim'
+          
     livereload:
       port: 35729
       
-    connect:
-      livereload:
-        options:
-          port: 9001
-          middleware: (connect, options) ->
-            return [lrSnippet, folderMount(connect, '.')]
-            
     regarde:
+      coffee:
+        files: 'assets/*.coffee'
+        tasks: ['coffee', 'livereload' ]
+        
       views:
         files: 'views/*.*'
-        tasks: ['livereload']
+        tasks: [ 'livereload' ]
+
+      tests:
+        files: 'test/*.coffee'
+        tasks: ['coffee']
+
+      runner:
+        files: [ 'test/*.slim' ]
+        tasks: ['slim']
 
   grunt.loadNpmTasks 'grunt-regarde'
-  grunt.loadNpmTasks 'grunt-contrib-connect'
+  grunt.loadNpmTasks 'grunt-slim'
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-livereload'
 
   grunt.registerTask 'default', [
-    'livereload-start',
-    # 'connect',
+    'coffee'
+    'slim'
+    'livereload-start'
     'regarde'
   ]

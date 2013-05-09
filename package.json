@@ -11,8 +11,9 @@
   "license": "MIT",
   "devDependencies": {
     "grunt": "*",
+    "grunt-slim": "*",
     "grunt-contrib-livereload": "*",
-    "grunt-contrib-connect": "*",
+    "grunt-contrib-coffee": "*",
     "grunt-regarde": "*"
   }
 }

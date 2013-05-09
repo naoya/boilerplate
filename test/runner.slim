@@ -1,0 +1,24 @@
+DOCTYPE html
+html
+  head
+    title Test'em
+    link rel="stylesheet" href="/testem/mocha.css"
+    script src="/public/js/vendor/mocha/mocha.js"
+    script src="/public/js/vendor/expect/expect.js"
+    script src="/public/js/vendor/sinon/index.js"
+    script mocha.setup('bdd')
+    script src="/testem.js"
+
+    /  data-main は require.config を共有するために読み込む
+    script src="/public/js/vendor/requirejs/require.js" data-main="/public/js/main"
+
+  body
+    #mocha
+
+    javascript:
+      var files = [];
+      {{#serve_files}}files.push("../{{src}}");{{/serve_files}}
+      require(files, function() {
+        mocha.run();
+      });
+
