@@ -14,7 +14,7 @@ This is my application's boilerplate for something. It's ready to use:
 - livereload w/ grunt
 - Testing: mocha + expect + sinon.js and testem
 
-Getting Start
+Getting Started
 -------------
 
     $ bundle
