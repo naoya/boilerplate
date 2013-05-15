@@ -22,7 +22,7 @@ Getting Start
     $ npm install
     $ foreman start
 
-Want to use other js libralies?
+Want to use other js libraries?
 -------------------------------
 
 - edit bower.json
