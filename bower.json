@@ -5,7 +5,7 @@
         "requirejs": "latest",
         "jquery": "latest",
         "backbone-amd": "latest",
-        "underscore-amd" : "lastest"
+        "underscore-amd" : "latest"
     },
     "devDependencies": {
         "mocha": "latest",
